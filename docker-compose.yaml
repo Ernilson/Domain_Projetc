@@ -1,0 +1,17 @@
+version: '3'
+services:
+  domain-app:
+   # container_name: domain-app
+    image: domain-app
+    build: .
+    ports:
+      - 9090:8080
+      
+  mysqldb:
+    container_name: mysqldb
+    image: mysql
+    ports:
+      - 3307:3306
+    environment:
+      MYSQL_DATABASE: teste45
+      MYSQL_ROOT_PASSWORD: root

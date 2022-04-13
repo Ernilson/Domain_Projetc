@@ -27,6 +27,12 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+		 <!-- for Migrations support -->
+        <dependency>
+		   <groupId>org.flywaydb</groupId>
+		   <artifactId>flyway-core</artifactId>
+		</dependency>  
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -61,9 +67,9 @@
 				<groupId>org.flywaydb</groupId>
 				<artifactId>flyway-maven-plugin</artifactId>
 				<configuration>
-					<url>dbc:sqlserver://localhost;databaseName=sqlServer</url>
+					<url>dbc:sqlserver://localhost;databaseName=gato</url>
 					<user>sa</user>
-					<password>music@25</password>
+					<password>admin123@</password>
 				</configuration>
 				<dependencies>
 					<dependency>
